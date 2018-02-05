@@ -1,0 +1,14 @@
+<div>
+  <ul>
+    <li *ngFor="let todo of todos$ | async">
+      <label [id]="todo.id">{{ todo.value }}</label>
+      <input id="check" type="checkbox"/>
+    </li>
+  </ul>
+  <div>
+    <p>Todo</p>
+    <input #todo placeholder="todo" id="1"/>
+    <button (click)="addTodo(todo)">Create</button>
+    <button (click)="removeTodo(todo)">Remove</button>
+  </div>
+</div>
